@@ -1,0 +1,11 @@
+module Submission where
+
+numSquares n = numSquaresHelper(n n)
+
+numSquaresHelper n i = if i = 1
+    then 1
+    else (i*i) + numSquares(n i-1)
+
+listSquares => [x] -> [x']
+listSquares [] = []
+listSquares (x:xs) = (x*x): listSquares xs
